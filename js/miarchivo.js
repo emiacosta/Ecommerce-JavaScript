@@ -16,11 +16,9 @@ const producto1 = new Producto("pollo", 500);
 const producto2 = new Producto("milanesa", 700);
 const producto3 = new Producto("patitas", 800);
 const producto4 = new Producto("suprema", 600);
-
-console.log(producto1);
-console.log(producto2);
-console.log(producto3);
-console.log(producto4);
+const listaNombreProductos = [producto1.nombre , producto2.nombre , producto3.nombre];
+listaNombreProductos.push(producto4.nombre);
+console.log("La lista de productos es: " + listaNombreProductos.join(", "));
 
 let entrada = prompt("Qué producto deseas comprar? POLLO - MILANESA - PATITAS - SUPREMA");
 //El siguiente ciclo le muestra al cliente el costo del producto, su IVA y su costo final, dependiendo del producto elegido.
