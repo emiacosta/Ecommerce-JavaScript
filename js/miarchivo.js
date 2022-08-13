@@ -77,4 +77,8 @@ const addToCarrito = () => {
     carritoDom.innerHTML = productosCarritoHTML;
 }
 
+const saludo = document.getElementById("saludo");
+nombreUsuario = prompt("¡Hola! ¿Cuál es tu nombre?");
+saludo.innerText = "Bienvenido " + nombreUsuario + ". ¿Qué deseas comprar?";
+
 
