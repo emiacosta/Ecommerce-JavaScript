@@ -1,46 +1,80 @@
-const suma = (a, b) => a + b
-const resta = (a, b) => a - b
-const iva = x => x * 0.21
+const productos = [
+    {
+        id: 0,
+        nombre: "POLLO",
+        precio: 600,
+        imagen: "./img/pollo.jpg"
+    },
+    {
+        id: 1,
+        nombre: "MILANESA",
+        precio: 800,
+        imagen: "./img/milanesa.jpg"
+    },
+    {
+        id: 2,
+        nombre: "PATITAS",
+        precio: 950,
+        imagen: "./img/patitas.jpg"
+    },
+    {
+        id: 3,
+        nombre: "SUPREMA",
+        precio: 700,
+        imagen: "./img/suprema.jpg"
+    },
+];
 
-class Producto {
-    constructor(nombre, precio) {
-        this.nombre = nombre.toUpperCase();
-        this.precio = parseFloat(precio);
-    }
-    sumaIva() {
-        return this.precio * 1.21;
-    }
+const carrito = [];
+
+const productoHTML = (producto) => {
+    const texto =  `
+    <div class="card" style="width: 18rem">
+      <img src="${producto.imagen}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h3 class="card-title">${producto.nombre}</h3>
+        <p class="card-text">Precio: $${producto.precio} x kg</p>
+        <button id="boton-${producto.id}" class="btn btn-success">Añadir al carrito</button>
+      </div>
+    </div>`;
+    return texto;
+};
+
+const productoCarritoHTML = (producto) => {
+    const texto =  `
+    <div class="card" style="width: 18rem">
+      <img src="${producto.imagen}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h3 class="card-title">${producto.nombre}</h3>
+        <p class="card-text">Precio: $${producto.precio} x kg</p>
+        <button id="boton-quitar-${producto.id}" class="btn btn-danger">Quitar</button>
+      </div>
+    </div>`;
+    return texto;
+};
+
+const catalogo = document.getElementById("catalogo");
+const carritoDom = document.getElementById("carrito");
+
+for (const producto of productos) {
+    catalogo.innerHTML += productoHTML(producto);
+};
+
+for (const producto of productos) {
+    const boton = document.getElementById(`boton-${producto.id}`);
+    boton.addEventListener("click", () => {
+        carrito.push(producto);
+        addToCarrito();
+    });
 }
 
-const producto1 = new Producto("pollo", 500);
-const producto2 = new Producto("milanesa", 700);
-const producto3 = new Producto("patitas", 800);
-const producto4 = new Producto("suprema", 600);
-const listaNombreProductos = [producto1.nombre , producto2.nombre , producto3.nombre];
-listaNombreProductos.push(producto4.nombre);
-console.log("La lista de productos es: " + listaNombreProductos.join(", "));
-
-let entrada = prompt("Qué producto deseas comprar? POLLO - MILANESA - PATITAS - SUPREMA");
-//El siguiente ciclo le muestra al cliente el costo del producto, su IVA y su costo final, dependiendo del producto elegido.
-while (entrada.toUpperCase() != "ESC") {
-
-    switch (entrada.toUpperCase()) {
-        case "POLLO":
-            alert("Costo por 1kg de " + producto1.nombre + ": $" + producto1.precio + ". " + "IVA 21%: $" + iva(producto1.precio) + ". " + "Costo total: $" + producto1.sumaIva());
-            break;
-        case "MILANESA":
-            alert("Costo por 1kg de " + producto2.nombre + ": $" + producto2.precio + ". " + "IVA 21%: $" + iva(producto2.precio) + ". " + "Costo total: $" + producto2.sumaIva());
-            break;
-        case "PATITAS":
-            alert("Costo por 1kg de " + producto3.nombre + ": $" + producto3.precio + ". " + "IVA 21%: $" + iva(producto3.precio) + ". " + "Costo total: $" + producto3.sumaIva());
-            break;
-        case "SUPREMA":
-            alert("Costo por 1kg de " + producto4.nombre + ": $" + producto4.precio + ". " + "IVA 21%: $" + iva(producto4.precio) + ". " + "Costo total: $" + producto4.sumaIva());
-            break;
-        default:
-            alert("El dato ingresado no corresponde a las opciones brindadas. Por favor, volvé a ingresar un dato correcto.")
-            break;
+const addToCarrito = () => {
+    let productosCarritoHTML = "";
+    for (const producto of carrito) {
+        productosCarritoHTML += productoCarritoHTML(producto);
     }
-    entrada = prompt("Ingresar otro producto: POLLO - MILANESA - PATITAS - SUPREMA");
+    console.log(productosCarritoHTML)
+    carritoDom.innerHTML = productosCarritoHTML;
 }
+
 

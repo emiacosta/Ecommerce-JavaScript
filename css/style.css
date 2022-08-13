@@ -1,0 +1,45 @@
+.logo {
+    color: white;
+    font-size: 30px;
+    margin-left: 25px;
+}
+
+.logo:hover {
+    color: #fff;
+}
+
+.encabezado {
+    background-color: #e11401;
+}
+
+.items {
+    justify-content: end;
+}
+
+.items2 {
+    text-decoration: none;
+    color: white;
+    display: block;
+    align-items: center;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.items2:hover {
+    color: white;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+    color: white;
+}
+
+.navbar-toggler:focus {
+    border-color: #fff;
+    box-shadow: none;
+}
+
+img {
+    height: 200px;
+}
