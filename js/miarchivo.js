@@ -28,26 +28,26 @@ const productos = [
 const carrito = [];
 
 const productoHTML = (producto) => {
-    const texto =  `
+    const texto = `
     <div class="card" style="width: 18rem">
       <img src="${producto.imagen}" class="card-img-top" alt="..." />
       <div class="card-body">
         <h3 class="card-title">${producto.nombre}</h3>
         <p class="card-text">Precio: $${producto.precio} x kg</p>
-        <button id="boton-${producto.id}" class="btn btn-success">Añadir al carrito</button>
+        <button id="boton-${producto.id}" class="btn btn-warning">Añadir al carrito</button>
       </div>
     </div>`;
     return texto;
 };
 
 const productoCarritoHTML = (producto) => {
-    const texto =  `
-    <div class="card" style="width: 18rem">
+    const texto = `
+    <div class="card">
       <img src="${producto.imagen}" class="card-img-top" alt="..." />
       <div class="card-body">
         <h3 class="card-title">${producto.nombre}</h3>
         <p class="card-text">Precio: $${producto.precio} x kg</p>
-        <button id="boton-quitar-${producto.id}" class="btn btn-danger">Quitar</button>
+        <button id="boton-quitar-${producto.id}" class="btn btn-dark">Eliminar del carrito</button>
       </div>
     </div>`;
     return texto;
@@ -76,9 +76,5 @@ const addToCarrito = () => {
     console.log(productosCarritoHTML)
     carritoDom.innerHTML = productosCarritoHTML;
 }
-
-const saludo = document.getElementById("saludo");
-nombreUsuario = prompt("¡Hola! ¿Cuál es tu nombre?");
-saludo.innerText = "Bienvenido " + nombreUsuario + ". ¿Qué deseas comprar?";
 
 

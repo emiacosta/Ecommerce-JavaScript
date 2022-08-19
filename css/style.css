@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@300&family=PT+Serif&family=Poppins:ital@0;1&family=Roboto&family=Signika+Negative:wght@600&display=swap");
+
 .logo {
+    font-family: "Oswald", sans-serif;
     color: white;
-    font-size: 30px;
-    margin-left: 25px;
+    font-size: 40px;
+    margin-left: 50px;
 }
 
 .logo:hover {
@@ -9,7 +12,7 @@
 }
 
 .encabezado {
-    background-color: #e11401;
+    background-color: #CA0606;
 }
 
 .items {
@@ -22,12 +25,12 @@
     display: block;
     align-items: center;
     padding: 20px;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
 }
 
 .items2:hover {
-    color: white;
+    color: yellow;
 }
 
 .navbar-toggler {
@@ -41,5 +44,43 @@
 }
 
 img {
+    margin-top: 15px;
     height: 200px;
+    border-radius: 10px;
+}
+
+.card {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin: 10px;
+    width: 300px;
+    background-color: #CA0606;
+}
+
+.card-body h3 {
+    color: #fff;
+}
+
+.card-body p {
+    color: #fff;
+}
+
+.footer {
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    background-color: #CA0606;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.footer a:hover {
+    color: yellow;
 }
