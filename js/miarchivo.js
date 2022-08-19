@@ -25,56 +25,97 @@ const productos = [
     },
 ];
 
+let contadorCarrito = 0;
 const carrito = [];
 
-const productoHTML = (producto) => {
-    const texto = `
-    <div class="card" style="width: 18rem">
-      <img src="${producto.imagen}" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h3 class="card-title">${producto.nombre}</h3>
-        <p class="card-text">Precio: $${producto.precio} x kg</p>
-        <button id="boton-${producto.id}" class="btn btn-warning">Añadir al carrito</button>
-      </div>
-    </div>`;
-    return texto;
-};
-
-const productoCarritoHTML = (producto) => {
-    const texto = `
+const productoCatalogoHTML = (producto) => {
+    return `
     <div class="card">
       <img src="${producto.imagen}" class="card-img-top" alt="..." />
       <div class="card-body">
         <h3 class="card-title">${producto.nombre}</h3>
         <p class="card-text">Precio: $${producto.precio} x kg</p>
-        <button id="boton-quitar-${producto.id}" class="btn btn-dark">Eliminar del carrito</button>
+        <button id="boton-catalogo-${producto.id}" class="btn btn-warning">Añadir al carrito</button>
       </div>
+     
     </div>`;
-    return texto;
 };
 
-const catalogo = document.getElementById("catalogo");
-const carritoDom = document.getElementById("carrito");
-
-for (const producto of productos) {
-    catalogo.innerHTML += productoHTML(producto);
+const productoCarritoHTML = (producto) => {
+    return `
+    <div class="card">
+      <img src="${producto.imagen}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h3 class="card-title">${producto.nombre}</h3>
+        <p class="card-text">Precio: $${producto.precio} x kg</p>
+        <button id="boton-carrito-${producto.idCompra}" class="btn btn-dark">Eliminar del carrito</button>
+      </div>
+     </div>
+    </div>`;
 };
 
-for (const producto of productos) {
-    const boton = document.getElementById(`boton-${producto.id}`);
-    boton.addEventListener("click", () => {
-        carrito.push(producto);
-        addToCarrito();
-    });
-}
+const mostrarCatalogo = () => {
+    const catalogoNodo = document.getElementById("catalogo");
+    let catalogoHTML = "";
 
-const addToCarrito = () => {
-    let productosCarritoHTML = "";
-    for (const producto of carrito) {
-        productosCarritoHTML += productoCarritoHTML(producto);
+    for (const producto of productos) {
+        catalogoHTML += productoCatalogoHTML(producto);
     }
-    console.log(productosCarritoHTML)
-    carritoDom.innerHTML = productosCarritoHTML;
-}
+
+    catalogoNodo.innerHTML = catalogoHTML;
+    botonesCatalogo();
+};
+
+const mostrarCarrito = () => {
+    const carritoNodo = document.getElementById("carrito");
+    const precioNodo = document.getElementById("precioTotal");
+    let carritoHTML = "";
+    let precioCarrito = 0;
+
+    for (const producto of carrito) {
+        carritoHTML += productoCarritoHTML(producto);
+        precioCarrito += producto.precio;
+    }
+
+
+    precioNodo.innerHTML = "$" + precioCarrito;
+    carritoNodo.innerHTML = carritoHTML;
+    botonesCarrito();
+};
+
+const botonesCatalogo = () => {
+    for (const producto of productos) {
+        const botonId = `boton-catalogo-${producto.id}`;
+        const botonNodo = document.getElementById(botonId);
+
+        botonNodo.addEventListener("click", () => {
+            const productoCarrito = {
+                nombre: producto.nombre,
+                precio: producto.precio,
+                imagen: producto.imagen,
+                idCompra: contadorCarrito,
+            };
+
+            contadorCarrito ++;
+            carrito.push(productoCarrito);
+            mostrarCarrito();
+        });
+    }
+};
+
+const botonesCarrito = () => {
+    for (const producto of carrito) {
+        const botonId = `boton-carrito-${producto.idCompra}`;
+        const botonNodo = document.getElementById(botonId);
+
+        botonNodo.addEventListener("click", () => {
+            const index = carrito.findIndex((p) => p.idCompra == producto.idCompra);
+            carrito.splice(index, 1);
+            mostrarCarrito();
+        });
+    }
+};
+
+mostrarCatalogo();
 
 

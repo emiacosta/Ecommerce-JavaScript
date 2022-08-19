@@ -85,6 +85,10 @@ img {
     color: yellow;
 }
 
-#catalogo h2 {
+.titulo-catalogo {
+    margin: 15px;
+}
+
+.titulo-carrito {
     margin: 15px;
 }
