@@ -84,3 +84,7 @@ img {
 .footer a:hover {
     color: yellow;
 }
+
+#catalogo h2 {
+    margin: 15px;
+}
