@@ -2,27 +2,95 @@ const productos = [
     {
         id: 0,
         nombre: "POLLO",
-        precio: 600,
+        precio: 450,
         imagen: "./img/pollo.jpg"
     },
     {
         id: 1,
-        nombre: "MILANESA",
-        precio: 800,
+        nombre: "MILANESA DE POLLO",
+        precio: 900,
         imagen: "./img/milanesa.jpg"
     },
     {
         id: 2,
-        nombre: "PATITAS",
-        precio: 950,
-        imagen: "./img/patitas.jpg"
+        nombre: "SUPREMA",
+        precio: 1100,
+        imagen: "./img/suprema.jpg"
     },
     {
         id: 3,
-        nombre: "SUPREMA",
-        precio: 700,
-        imagen: "./img/suprema.jpg"
+        nombre: "PATA Y MUSLO",
+        precio: 500,
+        imagen: "./img/pataymuslo.jpg"
     },
+    {
+        id: 4,
+        nombre: "PATITAS DE POLLO",
+        precio: 900,
+        imagen: "./img/patitas.jpg"
+    },
+    {
+        id: 5,
+        nombre: "NUGGETS DE POLLO CROCANTES",
+        precio: 980,
+        imagen: "./img/nuggets.jpg"
+    },
+    {
+        id: 6,
+        nombre: "BASTONES DE MUZZARELLA",
+        precio: 1400,
+        imagen: "./img/bastonMuzza.jpg"
+    },
+    {
+        id: 7,
+        nombre: "BOCADITOS DE ESPINACA Y QUESO",
+        precio: 850,
+        imagen: "./img/bocaditosEspQueso.jpg"
+    },
+    {
+        id: 8,
+        nombre: "BOCADITOS DE CALABAZA Y QUESO",
+        precio: 850,
+        imagen: "./img/bocaditosCalQueso.jpg"
+    },
+    {
+        id: 9,
+        nombre: "CROQUETAS DE PAPA, JAMÓN Y QUESO",
+        precio: 950,
+        imagen: "./img/croquetas.jpg"
+    },  
+    {
+        id: 10,
+        nombre: "PAPAS BASTÓN<br><br>",
+        precio: 800,
+        imagen: "./img/papasBaston.jpg"
+    },  
+    {
+        id: 11,
+        nombre: "PAPAS SMILE<br><br>",
+        precio: 950,
+        imagen: "./img/papasSmile.jpg"
+    },
+    
+    {
+        id: 12,
+        nombre: "MEDALLONES DE ESPINACA Y QUESO",
+        precio: 950,
+        imagen: "./img/medallonesEspQueso.jpg"
+    },
+    {
+        id: 13,
+        nombre: "PECHUGUITAS AL VERDEO",
+        precio: 1300,
+        imagen: "./img/pechugasVerdeo.jpg"
+    },
+    {
+        id: 14,
+        nombre: "FILET DE MERLUZA<br><br>",
+        precio: 1500,
+        imagen: "./img/filetMerluza.jpg"
+    },
+    
 ];
 
 let contadorCarrito = 0;
