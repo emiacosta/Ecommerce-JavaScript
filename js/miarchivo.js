@@ -58,20 +58,20 @@ const productos = [
         nombre: "CROQUETAS DE PAPA, JAMÓN Y QUESO",
         precio: 950,
         imagen: "./img/croquetas.jpg"
-    },  
+    },
     {
         id: 10,
         nombre: "PAPAS BASTÓN<br><br>",
         precio: 800,
         imagen: "./img/papasBaston.jpg"
-    },  
+    },
     {
         id: 11,
         nombre: "PAPAS SMILE<br><br>",
         precio: 950,
         imagen: "./img/papasSmile.jpg"
     },
-    
+
     {
         id: 12,
         nombre: "MEDALLONES DE ESPINACA Y QUESO",
@@ -90,11 +90,12 @@ const productos = [
         precio: 1500,
         imagen: "./img/filetMerluza.jpg"
     },
-    
+
 ];
 
 let contadorCarrito = 0;
-const carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+const vaciar = document.getElementById('vaciar');
 
 const productoCatalogoHTML = (producto) => {
     return `
@@ -105,7 +106,6 @@ const productoCatalogoHTML = (producto) => {
         <p class="card-text">Precio: $${producto.precio} x kg</p>
         <button id="boton-catalogo-${producto.id}" class="btn btn-warning">Añadir al carrito</button>
       </div>
-     
     </div>`;
 };
 
@@ -118,7 +118,6 @@ const productoCarritoHTML = (producto) => {
         <p class="card-text">Precio: $${producto.precio} x kg</p>
         <button id="boton-carrito-${producto.idCompra}" class="btn btn-dark">Eliminar del carrito</button>
       </div>
-     </div>
     </div>`;
 };
 
@@ -131,7 +130,7 @@ const mostrarCatalogo = () => {
     }
 
     catalogoNodo.innerHTML = catalogoHTML;
-    botonesCatalogo();
+    agregarAlCarrito();
 };
 
 const mostrarCarrito = () => {
@@ -145,13 +144,13 @@ const mostrarCarrito = () => {
         precioCarrito += producto.precio;
     }
 
-
-    precioNodo.innerHTML = "$" + precioCarrito;
     carritoNodo.innerHTML = carritoHTML;
-    botonesCarrito();
+    precioNodo.innerHTML = "$" + precioCarrito;
+    eliminarDelCarrito();
+    addLocalStorage();
 };
 
-const botonesCatalogo = () => {
+const agregarAlCarrito = () => {
     for (const producto of productos) {
         const botonId = `boton-catalogo-${producto.id}`;
         const botonNodo = document.getElementById(botonId);
@@ -164,14 +163,15 @@ const botonesCatalogo = () => {
                 idCompra: contadorCarrito,
             };
 
-            contadorCarrito ++;
+            contadorCarrito++;
             carrito.push(productoCarrito);
             mostrarCarrito();
+            addLocalStorage();
         });
     }
 };
 
-const botonesCarrito = () => {
+const eliminarDelCarrito = () => {
     for (const producto of carrito) {
         const botonId = `boton-carrito-${producto.idCompra}`;
         const botonNodo = document.getElementById(botonId);
@@ -184,6 +184,12 @@ const botonesCarrito = () => {
     }
 };
 
-mostrarCatalogo();
+function addLocalStorage (){
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+}
 
+
+
+mostrarCatalogo();
+mostrarCarrito();
 
