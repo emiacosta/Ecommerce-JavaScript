@@ -101,15 +101,11 @@ const productoCatalogoHTML = (producto) => {
     return `
     <div class="card animate__animated animate__flipInY">
       <img src="${producto.imagen}" class="card-img-top" alt="..." />
-      <div class="card-title">
-        <h3>${producto.nombre}</h3>
+      <div class="card-body">
+        <h3 class="card-title">${producto.nombre}</h3>
+        <p class="card-text">Precio: $${producto.precio} x kg</p>
+        <button id="boton-catalogo-${producto.id}" class="btn btn-warning">Añadir al carrito</button>
         </div>
-        <div class="card-text">
-        <p>Precio por kg: $${producto.precio}</p>
-        </div>
-      <div>
-      <button id="boton-catalogo-${producto.id}" class="btn btn-warning">Añadir al carrito</button>
-      </div>
     </div>`;
 };
 
@@ -117,15 +113,11 @@ const productoCarritoHTML = (producto) => {
     return `
     <div class="card animate__animated animate__flipInY">
       <img src="${producto.imagen}" class="card-img-top" alt="..." />
-      <div class="card-title">
-        <h3>${producto.nombre}</h3>
+      <div class="card-body">
+        <h3 class="card-title">${producto.nombre}</h3>
+        <p class="card-text">Precio: $${producto.precio} x kg</p>
+        <button id="boton-carrito-${producto.idCompra}" class="btn btn-dark">Eliminar del carrito</button>
         </div>
-        <div class="card-text">
-        <p>Precio por kg: $${producto.precio}</p>
-        </div>
-      <div>
-      <button id="boton-catalogo-${producto.id}" class="btn btn-dark">Eliminar del carrito</button>
-      </div>
     </div>`;
 }
 
@@ -139,6 +131,7 @@ const mostrarCatalogo = () => {
 
     catalogoNodo.innerHTML = catalogoHTML;
     agregarAlCarrito();
+    addLocalStorage();
 };
 
 const mostrarCarrito = () => {
