@@ -99,7 +99,7 @@ const vaciar = document.getElementById('vaciar');
 
 const productoCatalogoHTML = (producto) => {
     return `
-    <div class="card animate__animated animate__flipInY" >
+    <div class="card animate__animated animate__flipInY">
       <img src="${producto.imagen}" class="card-img-top" alt="..." />
       <div class="card-body">
         <h3 class="card-title">${producto.nombre}</h3>
@@ -191,4 +191,5 @@ function addLocalStorage() {
 
 mostrarCatalogo();
 mostrarCarrito();
+
 
