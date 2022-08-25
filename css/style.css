@@ -7,6 +7,11 @@
     margin-left: 50px;
 }
 
+.logoPollo {
+    margin: 10px;
+    height: 100px;
+}
+
 .logo:hover {
     color: #fff;
 }
@@ -53,16 +58,25 @@ img {
     font-family: "Oswald", sans-serif;
     font-size: 20px;
     margin: 10px;
-    width: 280px;
+    width: 300px;
     background-color: #CA0606;
 }
 
-.card-body h3 {
+.card-title {
+    margin-top: 10px;
+    height: 50px;
     color: #fff;
 }
 
-.card-body p {
+.card-text{
+    margin: 15px;
+    height: 20px;
     color: #fff;
+}
+
+
+.card-boton {
+    margin: 20px;
 }
 
 .footer {
@@ -92,3 +106,4 @@ img {
 .titulo-carrito {
     margin: 15px;
 }
+
