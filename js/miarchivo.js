@@ -179,6 +179,7 @@ const eliminarDelCarrito = () => {
         botonNodo.addEventListener("click", () => {
             const index = carrito.findIndex((p) => p.idCompra == producto.idCompra);
             carrito.splice(index, 1);
+            addLocalStorage();
             mostrarCarrito();
         });
     }
