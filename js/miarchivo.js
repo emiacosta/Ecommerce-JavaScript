@@ -61,13 +61,13 @@ const productos = [
     },
     {
         id: 10,
-        nombre: "PAPAS BASTÓN<br><br>",
+        nombre: "PAPAS BASTÓN",
         precio: 800,
         imagen: "./img/papasBaston.jpg"
     },
     {
         id: 11,
-        nombre: "PAPAS SMILE<br><br>",
+        nombre: "PAPAS SMILE",
         precio: 950,
         imagen: "./img/papasSmile.jpg"
     },
@@ -86,7 +86,7 @@ const productos = [
     },
     {
         id: 14,
-        nombre: "FILET DE MERLUZA<br><br>",
+        nombre: "FILET DE MERLUZA",
         precio: 1500,
         imagen: "./img/filetMerluza.jpg"
     },
