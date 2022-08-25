@@ -63,13 +63,14 @@ img {
 }
 
 .card-title {
-    margin-top: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
     height: 50px;
     color: #fff;
 }
 
 .card-text{
-    margin: 15px;
+    margin-top: 15px;
     height: 20px;
     color: #fff;
 }
