@@ -99,7 +99,7 @@ const vaciar = document.getElementById('vaciar');
 
 const productoCatalogoHTML = (producto) => {
     return `
-    <div class="card">
+    <div class="card animate__animated animate__flipInY" >
       <img src="${producto.imagen}" class="card-img-top" alt="..." />
       <div class="card-body">
         <h3 class="card-title">${producto.nombre}</h3>
@@ -111,7 +111,7 @@ const productoCatalogoHTML = (producto) => {
 
 const productoCarritoHTML = (producto) => {
     return `
-    <div class="card">
+    <div class="card animate__animated animate__flipInY">
       <img src="${producto.imagen}" class="card-img-top" alt="..." />
       <div class="card-body">
         <h3 class="card-title">${producto.nombre}</h3>
@@ -185,11 +185,9 @@ const eliminarDelCarrito = () => {
     }
 };
 
-function addLocalStorage (){
+function addLocalStorage() {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
-
-
 
 mostrarCatalogo();
 mostrarCarrito();
