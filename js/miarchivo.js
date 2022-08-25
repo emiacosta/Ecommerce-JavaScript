@@ -95,7 +95,6 @@ const productos = [
 
 let contadorCarrito = 0;
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-const vaciar = document.getElementById('vaciar');
 
 const productoCatalogoHTML = (producto) => {
     return `
