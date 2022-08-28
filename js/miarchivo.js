@@ -94,6 +94,8 @@ const productos = [
 ];
 
 let contadorCarrito = 0;
+
+// Uso del OR para definir una variable con información del carrito o un array vacío si no hay nada seleccionado por el usuario.
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 const productoCatalogoHTML = (producto) => {
