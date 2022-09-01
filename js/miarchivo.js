@@ -169,6 +169,16 @@ const agregarAlCarrito = () => {
             carrito.push(productoCarrito);
             mostrarCarrito();
             addLocalStorage();
+
+            Swal.fire({
+                title: 'Añadiste un producto al carrito',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+                }
+              })
         });
     }
 };
@@ -183,6 +193,16 @@ const eliminarDelCarrito = () => {
             carrito.splice(index, 1);
             addLocalStorage();
             mostrarCarrito();
+
+            Swal.fire({
+                title: 'Eliminaste un producto del carrito',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+                }
+              })
         });
     }
 };
