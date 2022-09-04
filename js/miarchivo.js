@@ -170,15 +170,13 @@ const agregarAlCarrito = () => {
             mostrarCarrito();
             addLocalStorage();
 
-            Swal.fire({
-                title: 'Añadiste un producto al carrito',
-                showClass: {
-                  popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                  popup: 'animate__animated animate__fadeOutUp'
+            Toastify({
+                text: `Agregaste ${producto.nombre} al carrito`,
+                className: "info",
+                style: {
+                  background: "linear-gradient(to right, #CA0606, #ff0000)",
                 }
-              })
+              }).showToast();
         });
     }
 };
@@ -194,15 +192,13 @@ const eliminarDelCarrito = () => {
             addLocalStorage();
             mostrarCarrito();
 
-            Swal.fire({
-                title: 'Eliminaste un producto del carrito',
-                showClass: {
-                  popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                  popup: 'animate__animated animate__fadeOutUp'
+            Toastify({
+                text: `Eliminaste ${producto.nombre} del carrito`,
+                className: "info",
+                style: {
+                  background: "linear-gradient(to right, #CA0606, #ff0000)",
                 }
-              })
+              }).showToast();
         });
     }
 };
