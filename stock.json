@@ -1,83 +1,69 @@
 [
     {
         "id": 0,
-        "nombre": "POLLO",
-        "precio": 450,
-        "imagen": "./img/POLLO.jpg",
-        "cantidad": 1
-    },
-    {
-        "id": 1,
         "nombre": "MILANESA DE POLLO",
         "precio": 900,
        "imagen": "./img/MILANESA DE POLLO.jpg",
        "cantidad": 1
     },
     {
-        "id": 2,
-        "nombre": "SUPREMA",
-        "precio": 1100,
-        "imagen": "./img/SUPREMA.jpg",
-        "cantidad": 1
-    },
-    {
-        "id": 3,
+        "id": 1,
         "nombre": "PATA Y MUSLO",
         "precio": 500,
         "imagen": "./img/PATA Y MUSLO.jpg",
         "cantidad": 1
     },
     {
-        "id": 4,
+        "id": 2,
         "nombre": "PATITAS DE POLLO",
         "precio": 900,
         "imagen": "./img/PATITAS DE POLLO.jpg",
         "cantidad": 1
     },
     {
-        "id": 5,
+        "id": 3,
         "nombre": "NUGGETS DE POLLO CROCANTES",
         "precio": 980,
         "imagen": "./img/NUGGETS DE POLLO CROCANTES.jpg",
         "cantidad": 1
     },
     {
-        "id": 6,
+        "id": 4,
         "nombre": "BASTONES DE MUZZARELLA",
         "precio": 1400,
         "imagen": "./img/BASTONES DE MUZZARELLA.jpg",
         "cantidad": 1
     },
     {
-        "id": 7,
+        "id": 5,
         "nombre": "BOCADITOS DE ESPINACA Y QUESO",
         "precio": 850,
         "imagen": "./img/BOCADITOS DE ESPINACA Y QUESO.jpg",
         "cantidad": 1
     },
     {
-        "id": 8,
+        "id": 6,
         "nombre": "BOCADITOS DE CALABAZA Y QUESO",
         "precio": 850,
         "imagen": "./img/BOCADITOS DE CALABAZA Y QUESO.jpg",
         "cantidad": 1
     },
     {
-        "id": 9,
+        "id": 7,
         "nombre": "CROQUETAS DE PAPA, JAMÓN Y QUESO",
         "precio": 950,
         "imagen": "./img/CROQUETAS DE PAPA, JAMÓN Y QUESO.jpg",
         "cantidad": 1
     },
     {
-        "id": 10,
+        "id": 8,
         "nombre": "PAPAS BASTÓN",
         "precio": 800,
         "imagen": "./img/PAPAS BASTÓN.jpg",
         "cantidad": 1
     },
     {
-        "id": 11,
+        "id": 9,
         "nombre": "PAPAS SMILE",
         "precio": 950,
         "imagen": "./img/PAPAS SMILE.jpg",
@@ -85,21 +71,21 @@
     },
 
     {
-        "id": 12,
+        "id": 10,
         "nombre": "MEDALLONES DE ESPINACA Y QUESO",
         "precio": 950,
         "imagen": "./img/MEDALLONES DE ESPINACA Y QUESO.jpg",
         "cantidad": 1
     },
     {
-        "id": 13,
+        "id": 11,
         "nombre": "PECHUGUITAS AL VERDEO",
         "precio": 1300,
         "imagen": "./img/PECHUGUITAS AL VERDEO.jpg",
         "cantidad": 1
     },
     {
-        "id": 14,
+        "id": 12,
         "nombre": "FILET DE MERLUZA",
         "precio": 1500,
         "imagen": "./img/FILET DE MERLUZA.jpg",
