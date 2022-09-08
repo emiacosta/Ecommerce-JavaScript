@@ -11,6 +11,11 @@
     height: 100px;
 }
 
+#carro {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
 .logo:hover {
     color: #fff;
 }
@@ -90,3 +95,4 @@ img {
 .contenedorCarrito tr td{
     color: #fff;
 }
+
