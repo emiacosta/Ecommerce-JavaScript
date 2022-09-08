@@ -2,9 +2,8 @@
 
 .logo {
     font-family: "Oswald", sans-serif;
-    color: white;
+    color: #fff;
     font-size: 40px;
-    margin-left: 50px;
 }
 
 .logoPollo {
@@ -18,34 +17,6 @@
 
 .encabezado {
     background-color: #CA0606;
-}
-
-.items {
-    justify-content: end;
-}
-
-.items2 {
-    text-decoration: none;
-    color: white;
-    display: block;
-    align-items: center;
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.items2:hover {
-    color: yellow;
-}
-
-.navbar-toggler {
-    border-color: #fff;
-    color: white;
-}
-
-.navbar-toggler:focus {
-    border-color: #fff;
-    box-shadow: none;
 }
 
 img {
@@ -103,7 +74,18 @@ img {
     margin: 15px;
 }
 
-.titulo-carrito {
-    margin: 15px;
+.contenedorCarrito {
+    background-color: #ce3d3d;
 }
 
+.contenedorCarrito {
+    color: #fff;
+}
+
+.contenedorCarrito th{
+    color: #fff;
+}
+
+.contenedorCarrito tr td{
+    color: #fff;
+}
