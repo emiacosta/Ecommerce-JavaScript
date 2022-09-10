@@ -93,16 +93,16 @@
     },
     {
         "id": 13,
-        "nombre": "POLLO",
+        "nombre": "POLLO ENTERO",
         "precio": 500,
-        "imagen": "./img/POLLO.jpg",
+        "imagen": "./img/POLLO ENTERO.jpg",
         "cantidad": 1
     },
     {
         "id": 14,
-        "nombre": "SUPREMA",
+        "nombre": "SUPREMAS",
         "precio": 1100,
-        "imagen": "./img/SUPREMA.jpg",
+        "imagen": "./img/SUPREMAS.jpg",
         "cantidad": 1
     }
 
