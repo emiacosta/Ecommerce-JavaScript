@@ -90,6 +90,20 @@
         "precio": 1500,
         "imagen": "./img/FILET DE MERLUZA.jpg",
         "cantidad": 1
+    },
+    {
+        "id": 13,
+        "nombre": "POLLO",
+        "precio": 500,
+        "imagen": "./img/POLLO.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 14,
+        "nombre": "SUPREMA",
+        "precio": 1100,
+        "imagen": "./img/SUPREMA.jpg",
+        "cantidad": 1
     }
 
 ]
