@@ -15,9 +15,9 @@
     },
     {
         "id": 2,
-        "nombre": "PATITAS DE POLLO",
-        "precio": 900,
-        "imagen": "./img/PATITAS DE POLLO.jpg",
+        "nombre": "SUPREMAS",
+        "precio": 1100,
+        "imagen": "./img/SUPREMAS.jpg",
         "cantidad": 1
     },
     {
@@ -29,41 +29,48 @@
     },
     {
         "id": 4,
+        "nombre": "PATITAS DE POLLO",
+        "precio": 900,
+        "imagen": "./img/PATITAS DE POLLO.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
         "nombre": "BASTONES DE MUZZARELLA",
         "precio": 1400,
         "imagen": "./img/BASTONES DE MUZZARELLA.jpg",
         "cantidad": 1
     },
     {
-        "id": 5,
+        "id": 6,
         "nombre": "BOCADITOS DE ESPINACA Y QUESO",
         "precio": 850,
         "imagen": "./img/BOCADITOS DE ESPINACA Y QUESO.jpg",
         "cantidad": 1
     },
     {
-        "id": 6,
+        "id": 7,
         "nombre": "BOCADITOS DE CALABAZA Y QUESO",
         "precio": 850,
         "imagen": "./img/BOCADITOS DE CALABAZA Y QUESO.jpg",
         "cantidad": 1
     },
     {
-        "id": 7,
+        "id": 8,
         "nombre": "CROQUETAS DE PAPA, JAMÓN Y QUESO",
         "precio": 950,
         "imagen": "./img/CROQUETAS DE PAPA, JAMÓN Y QUESO.jpg",
         "cantidad": 1
     },
     {
-        "id": 8,
+        "id": 9,
         "nombre": "PAPAS BASTÓN",
         "precio": 800,
         "imagen": "./img/PAPAS BASTÓN.jpg",
         "cantidad": 1
     },
     {
-        "id": 9,
+        "id": 10,
         "nombre": "PAPAS SMILE",
         "precio": 950,
         "imagen": "./img/PAPAS SMILE.jpg",
@@ -71,39 +78,32 @@
     },
 
     {
-        "id": 10,
+        "id": 11,
         "nombre": "MEDALLONES DE ESPINACA Y QUESO",
         "precio": 950,
         "imagen": "./img/MEDALLONES DE ESPINACA Y QUESO.jpg",
         "cantidad": 1
     },
     {
-        "id": 11,
+        "id": 12,
         "nombre": "PECHUGUITAS AL VERDEO",
         "precio": 1300,
         "imagen": "./img/PECHUGUITAS AL VERDEO.jpg",
         "cantidad": 1
     },
     {
-        "id": 12,
+        "id": 13,
         "nombre": "FILET DE MERLUZA",
         "precio": 1500,
         "imagen": "./img/FILET DE MERLUZA.jpg",
         "cantidad": 1
     },
     {
-        "id": 13,
+        "id": 14,
         "nombre": "POLLO ENTERO",
         "precio": 500,
         "imagen": "./img/POLLO ENTERO.jpg",
         "cantidad": 1
-    },
-    {
-        "id": 14,
-        "nombre": "SUPREMAS",
-        "precio": 1100,
-        "imagen": "./img/SUPREMAS.jpg",
-        "cantidad": 1
-    }
+    }   
 
 ]
